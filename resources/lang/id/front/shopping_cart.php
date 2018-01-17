@@ -1,0 +1,38 @@
+<?php
+return array(
+  'title'         => 'Keranjang Belanja',
+  'col_product'   => 'Produk',
+  'col_price'     => 'Harga',
+  'col_amount'    => 'Jumlah',
+  'cart'          => 'Keranjang',
+  'product_total' => 'Jumlah Produk',
+  'weight_total'  => 'Total Berat Barang',
+  'price_total'   => 'Total Harga',
+  'shopping'      => 'Belanja',
+  'empty_cart'    => 'Keranjang belanja anda kosong.',
+  'recommendation'=> 'Produk Rekomendasi',
+
+  // Checkout
+  'destination'   => 'Alamat Pengiriman',
+  'my_address'    => 'Alamat saya',
+  'name'          => 'Nama',
+  'phone'         => 'No. Telp',
+  'address'       => 'Alamat',
+  'province'      => 'Provinsi',
+  'city'          => 'Kota / Kabupaten',
+  'postal'        => 'Kode Pos',
+  'new_address'   => 'Alamat Baru',
+  'first_name'    => 'Nama Depan',
+  'last_name'     => 'Nama Belakang',
+  'c_province'    => 'Pilih Provinsi',
+  'c_city'        => 'Pilih Kota',
+  'c_courier'     => 'Pilih Layanan Pengiriman',
+  'c_courier2'    => 'Layanan Pengiriman',
+  'c_courier3'    => 'Pilih jenis ekspedisi',
+  'c_courier4'    => 'Tipe Pengiriman',
+  'c_courier5'    => 'Pilih Tipe Pengiriman',
+  'shipping_cost' => 'Biaya Kirim',
+  'payment_total' => 'Total Pembayaran',
+  'pay'           => 'Lanjut ke pembayaran', 
+);
+?>

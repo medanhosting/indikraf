@@ -1,0 +1,230 @@
+.input-group:before,
+.input-group:after
+	content: ""
+	display: table
+
+.input-group:after
+	clear: both
+
+.input-group
+	input
+		float: left
+
+	&__addon
+		display: inline-block
+		float: left
+
+input[type="search"]::-webkit-input-placeholder
+	font-style: italic
+input[type="search"]:-moz-placeholder
+	font-style: italic
+input[type="search"]:-ms-input-placeholder
+	font-style: italic
+
+input::-webkit-input-placeholder
+	color: $gray-light
+input:-moz-placeholder
+	color: $gray-light
+input:-ms-input-placeholder
+	color: $gray-light
+
+form
+	input,
+	select,
+	textarea,
+	option,
+		color: $text-color
+
+		&:focus
+			outline: none
+			box-shadow: 0 0 4px $color-primary-dark
+
+	input,
+	select,
+	textarea,
+	button
+		display: block
+		width: 100%
+
+	input,
+	select,
+	textarea
+		padding: 10px 16px
+		+border-radius(4px)
+		border: 1px solid darken($gray-lighter, 10%)
+
+	label
+		margin-bottom: 5px
+		display: inline-block
+
+	.form-group
+		margin-bottom: 10px
+
+	.group--radio
+		input
+			display: inline-block
+			width: auto
+
+	.radio-group
+		border-bottom: 2px solid darken($gray-lighter, 10%)
+
+	.radio-group:last-child
+		border: none
+
+	.group--header
+		padding: 10px
+		font-weight: bold
+		border-bottom: 1px solid darken($gray-lighter, 10%)
+
+.resi-field-custom
+	color: $text-color
+	display: inline-block
+	padding: 5px
+	border: 1px solid darken($gray-lighter, 10%)
+	max-width: 130px
+
+.form-group:after
+	display: table
+	content: ""
+	clear: both
+
+.form-group
+	margin: 10px 0
+
+	.form-label
+		font-weight: bold
+		margin-bottom: 10px
+		display: inline-block
+
+	.form-field
+		width: 100%
+		padding: 10px
+		+border-radius(4px)
+		border: 1px solid darken($gray-lighter, 10%)
+		display: block
+		background-color: #FFF
+
+		&--gray
+			background-color: $gray-lighter
+
+	textarea.form-field
+		min-height: 100px
+
+	.form-field-static
+		padding: 10px 0
+		font-size: 1.1em
+		font-weight: bold
+		display: inline-block
+
+.form-submit
+	width: auto
+	padding: 10px 30px
+
+.form-blue
+	input,
+	select,
+	textarea
+		background: transparent
+		border: 1px solid $color-primary
+
+.quantity
+	position: relative
+	padding: 0
+
+	&:after
+		display: table
+		clear: both
+		content: ""
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+	-webkit-appearance: none
+	margin: 0
+
+input[type=number]
+	-moz-appearance: textfield
+
+.quantity input
+	line-height: 1.5em
+	display: block
+	padding: 0
+	margin: 0
+	padding: 5px 10px 5px 20px
+	border: 1px solid #eee
+	width: 100%
+
+.quantity input:focus
+	outline: 0
+
+.quantity-button
+	cursor: pointer
+	text-align: center
+	font-weight: bold
+	font-size: 1.5em
+	transform: translateY(-50%)
+	user-select: none
+
+.quantity-button.quantity-up
+	position: absolute
+	top: 50%
+	right: 15px
+
+.quantity-button.quantity-down
+	position: absolute
+	top: 50%
+	right: 35px
+
+.border-radius-lg
+	+border-radius(20px)
+
+@media screen and (min-width: $xs-device)
+	.history--inline
+		.form-group
+			display: inline-block
+			margin: 0 auto
+			vertical-align: middle
+
+			input,
+			select,
+			button,
+				display: inline-block
+
+			input,
+			select
+				width: auto
+				vertical-align: middle
+				padding: 5px 8px
+
+	.group--medium,
+	.group--small
+		width: 100%
+
+@media screen and (min-width: $medium-device)
+	.form-inline
+		.form-group
+			display: inline-block
+			margin: 0
+			vertical-align: middle
+			margin-right: 10px
+
+			input,
+			select,
+			button,
+			label
+				display: inline-block
+
+			label
+				max-width: 100%
+				margin-bottom: 5px
+
+			input,
+			select
+				width: auto
+				vertical-align: middle
+				padding: 6px 36px 6px 12px
+
+	.group--medium
+		width: 75%
+
+	.group--small
+		width: 50%

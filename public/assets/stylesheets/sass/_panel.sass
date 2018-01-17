@@ -1,0 +1,148 @@
+.panel
+	background-color: lighten($gray-lighter, 4%)
+	margin: 10px
+	+border-radius(4px)
+	border: 1px solid darken($gray-lighter, 4%)
+
+	.panel-head,
+	.panel-body,
+	.panel-footer
+		padding: 10px 20px
+
+	.panel-head
+		border-bottom: 1px solid darken($gray-lighter, 4%)
+
+	.panel-footer
+		border-top: 1px solid darken($gray-lighter, 4%)
+
+	.panel--no-border
+		border: none
+
+.panel-default
+	.panel-head
+		font-size: 1.2em
+		color: $color-primary-dark
+		font-weight: bold
+
+	.panel--black
+		color: $text-color
+
+	.panel-body
+		overflow-x: auto
+
+.panel-fullscreen
+	padding: 0
+	margin: 0
+
+.panel--history
+	.panel-head
+		text-align: center
+		font-weight: normal
+		color: inherit
+
+.panel:after
+	display: table
+	clear: both
+	content: ""
+
+.panel
+	&__item
+		float: left
+
+		&__head
+			color: $color-primary
+
+		&__head,
+		&__body
+			margin-bottom: 10px
+
+.panel--login
+	max-width: 440px
+	padding: 10px
+
+@media screen and (min-width: $xs-device)
+	.panel
+		&__item
+			width: 100%
+			padding: 10px
+
+	.panel-default
+		background-color: #FFF
+
+		.panel-head--history
+			font-size: 0.8em
+
+	.panel-hide-sm
+		display: none
+
+	.panel-hide-md
+		display: block
+
+	.panel--login
+		margin-left: 10px
+		margin-right: 10px
+
+	.panel-fullscreen
+		border: none
+		border-top: 1px solid darken($gray-lighter, 4%)
+		border-bottom: 1px solid darken($gray-lighter, 4%)
+		+border-radius(0)
+
+		.panel-head,
+		.panel-body,
+		.panel-footer
+			padding: 8px 5px
+
+	.panel-submit-wrapper
+		text-align: center
+
+	.panel--cart
+		margin-bottom: 10px
+
+@media screen and (min-width: $small-device)
+	.panel--login
+		margin-left: auto
+		margin-right: auto
+
+@media screen and (min-width: $medium-device)
+	.panel
+		&__item
+			width: 50%
+
+	.panel-default
+		background-color: lighten($gray-lighter, 4%)
+
+		.panel__item:first-child
+			border-right: 1px solid darken($gray-lighter, 5%)
+
+		.panel__item
+			padding: 10px 40px
+
+		.panel-head--history
+			font-size: 1em
+
+	.panel-fullscreen
+		border: 1px solid darken($gray-lighter, 4%)
+		+border-radius(4px)
+		margin: 10px 0
+
+		.panel-head,
+		.panel-body,
+		.panel-footer
+			padding: 10px 20px
+
+	.panel-hide-sm
+		display: block
+
+	.panel-hide-md
+		display: none
+
+	.panel--login
+		margin: 0 auto
+		padding: 10px 30px
+
+	.panel-submit-wrapper
+		text-align: right
+
+	.panel--cart
+		margin-bottom: 0

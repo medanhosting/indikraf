@@ -1,0 +1,38 @@
+<?php
+return array(
+  'title'         => 'Shopping Cart',
+  'col_product'   => 'Product',
+  'col_price'     => 'Price',
+  'col_amount'    => 'Quantity',
+  'cart'          => 'Cart',
+  'product_total' => 'Total Products',
+  'weight_total'  => 'Total Weight',
+  'price_total'   => 'Total Price',
+  'shopping'      => 'Shopping',
+  'empty_cart'    => 'Your shopping cart is empty.',
+  'recommendation'=> 'Recommendation Product',
+
+  // Checkout
+  'destination'   => 'Destination',
+  'my_address'    => 'My Address',
+  'name'          => 'Name',
+  'phone'         => 'Phone Number',
+  'address'       => 'Addres',
+  'province'      => 'Province',
+  'city'          => 'City',
+  'postal'        => 'Postal Code',
+  'new_address'   => 'New Address',
+  'first_name'    => 'First Name',
+  'last_name'     => 'Last Name',
+  'c_province'    => 'Choose Province',
+  'c_city'        => 'Choose City',
+  'c_courier'     => 'Choose Courier',
+  'c_courier2'    => 'Choose Courier',
+  'c_courier3'    => 'Choose Courier',
+  'c_courier4'    => 'Choose Courier Type',
+  'c_courier5'    => 'Choose Courier Type',
+  'shipping_cost' => 'Shipping Cost',
+  'payment_total' => 'Total Payment',
+  'pay'           => 'Continue to payment',
+);
+?>

@@ -1,0 +1,1772 @@
+@import "mixins"
+@import "variables"
+@import "normalize"
+@import "reset"
+@import "typography"
+@import "button"
+@import "panel"
+@import "comment"
+@import "modal"
+@import "pagination"
+@import "tab"
+@import "breadcrumb"
+@import "dropdown"
+@import "table"
+@import "form"
+@import "error"
+@import "transition"
+@import "progress"
+@import "filter"
+
+.loading
+	position: fixed
+	left: 0px
+	top: 0px
+	width: 100%
+	height: 100%
+	z-index: 9999
+	background: url('../../images/loading.gif') center no-repeat #fff
+	background-size: 30px
+
+.site-page
+	position: relative
+	z-index: 1
+	background-color: #FFF
+
+.sidenav
+	position: fixed
+	width: 240px
+	height: 100%
+	z-index: 3
+	top: 0
+	left: 0
+	background-color: $color-primary
+	transform: translateX(-240px)
+	+transition(transform 0.4s)
+	overflow-y: auto
+
+	.nav-close-wrap
+		text-align: right
+
+	li, a
+		display: block
+
+	a
+		padding: 16px
+		text-transform: uppercase
+		color: #FFF
+
+.sidenav-profile
+	padding: 16px
+	color: #FFF
+
+	a
+		padding: 0
+		text-transform: none
+
+	&-name, &-email
+		padding: 5px 0
+
+	&-name
+		font-size: 1.3em
+
+	&-email
+		font-size: 1.1em
+		opacity: 0.8
+
+.pushed
+	transform: translateX(0)
+
+.gutter
+	padding-left: 15px
+	padding-right: 15px
+
+.header
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 2
+	+transition(all 0.3s ease-out)
+
+.header--sticky
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25)
+
+.main-section
+	position: relative
+
+.centerize
+	text-align: center
+	margin: 0 auto
+	vertical-align: middle
+
+.clearfix:after
+	display: table
+	content: ""
+	clear: both
+
+.container
+	display: block
+	margin: 0
+	padding: 0
+
+.section:after
+	clear: both
+	display: table
+	content: ""
+
+.section
+	margin: 0 auto
+	position: relative
+
+[class*="col-"]
+	float: left
+
+.rwd:after
+	clear: both
+	display: table
+	content: ""
+
+.rwd
+	[class*="col-"]
+		padding: 0
+
+.pull-left
+	float: left
+
+.pull-right
+	float: right
+
+.border-bottom
+	border-bottom: 1px solid darken($gray-lighter, 4%)
+
+.no-pad
+	padding: 0!important
+
+[class*="col-"].pad
+	padding: 10px
+
+.load-more
+	text-align: center
+	margin-bottom: 32px
+
+.load-item
+	display: none
+
+.to-top
+	position: fixed
+	bottom: 20px
+	right: 10px
+	z-index: 2
+
+//== header block
+//
+// contact
+.container--contact
+	background-color: $gray-lighter
+	position: fixed
+	z-index: 2
+	top: 0
+	left: 0
+	right: 0
+
+.section--contact
+	margin: 0 auto
+	font-size: $font-size-small
+	line-height: $line-height-large
+
+	&__phone
+		font-weight: bold
+
+	&__email,
+	&__phone
+		padding: 6px 16px
+
+// menu
+.container--menu
+	background-color: #FFF
+
+.section--menu
+	margin: 0 auto
+	position: relative
+
+	&__logo,
+	&__toggle,
+	&__cart,
+	&__tools,
+	&__user,
+	&__search
+		display: inline-block
+
+	&__toggle
+		float: left
+
+		&__btn
+			display: block
+			padding: 5px 10px
+			background: #FFF
+			+border-radius(4px)
+
+			.icon-bar
+				display: block
+				width: 22px
+				height: 2px
+				background: $color-primary
+				margin-top: 4px
+
+			.icon-bar:first-child
+				margin-top: 0
+
+		&__btn:focus
+			background: darken(#FFF, 12.5%)
+
+	&__cart
+		padding: 4px 10px
+
+		&__btn
+			padding: 0
+			border: 0
+			background: transparent
+			float: right
+			color: $color-primary-dark
+			cursor: pointer
+
+			img
+				float: left
+
+			.cart-quantity
+				float: left
+				padding: 0 10px
+
+			.icon--costume
+				font-size: 16px
+
+		&__btn:nth-child(2)
+			margin-right: 15px
+
+		&__btn:after
+			clear: both
+			display: table
+			content: ""
+
+	&__tools
+		float: right
+		padding: 3px 0
+
+	&__user
+		float: right
+		padding: 3px 0
+
+	&__search
+		position: absolute
+		left: 50%
+		transform: translateX(-50%)
+
+		&__input
+			input
+				width: 360px
+				padding: 9px 12px
+				border: 1px solid $color-primary
+				border-right: none
+				+border-radius(4px 0 0 4px)
+
+			.btn
+				padding: 9px 16px
+				+border-radius(0 4px 4px 0)
+
+// nav
+.container--nav
+	background: $color-primary-dark
+
+.container--search
+	background: #FFF
+	visibility: hidden
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.25)
+	+transition(opacity 0.3s ease-out)
+	opacity: 0
+	overflow: hidden
+
+.is-active
+	visibility: visible
+	opacity: 1
+
+.img-responsive
+	width: 100%
+	height: auto
+
+.section--nav
+	margin: 0 auto
+
+	&__bar
+		text-align: center
+
+		li
+			display: inline-block
+
+		a
+			display: block
+			color: #FFF
+			background: inherit
+			padding: 10px 28px
+
+		a:hover
+			background: darken($color-primary-dark, 15%)
+
+	&__search
+		padding: 10px 16px
+
+		&__input
+			input
+				float: left
+				display: block
+				width: 80%
+				padding: 9px 12px
+				border: 1px solid $color-primary
+				border-right: none
+				+border-radius(4px 0 0 4px)
+
+			div
+				display: block
+				width: 20%
+
+			.btn
+				display: block
+				width: 100%
+				padding: 7.5px 16px
+				+border-radius(0 4px 4px 0)
+
+//== main block
+//
+// slider
+.container--slider
+	background: url('../../images/slider.jpg') no-repeat
+	background-size: cover
+
+.section--slider
+	&__item
+		&__ratio
+			position: relative
+			padding-bottom: 25%
+			height: 0
+			margin: 0 auto
+
+			div
+				width: 100%
+				height: 100%
+				position: absolute
+				top: 0
+
+				img
+					width: 100%
+					height: 100%
+					object-fit: contain
+
+.slider-next,
+.slider-prev
+	z-index: 1
+	position: absolute
+	top: 50%
+	transform: translate(0, -50%)
+	border: none
+	background: transparent
+	cursor: pointer
+
+	img
+		width: 40px
+		height: 40px
+
+.slider-next
+	right: 25px
+
+.slider-prev
+	left: 25px
+
+.draggable
+	cursor: pointer
+
+.page-head
+	background: rgba(0,0,0,0.3)
+	position: relative
+
+	&__title
+		color: #FFF
+		text-align: center
+		padding: 54px 0
+
+		h1
+			font-size: 2.5em
+
+	&__user
+		background: url('../../images/BG_email.jpg') no-repeat
+		background-size: cover
+		color: #FFF
+		padding: 27px
+		text-align: center
+
+.profile
+	position: relative
+	display: inline-block
+
+	&__image
+		display: inline-block
+		vertical-align: middle
+		width: 90px
+		height: 90px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			+border-radius(50%)
+
+	&__attributes
+		vertical-align: middle
+		display: inline-block
+		margin-left: 10px
+
+		p
+			line-height: 1.5em
+
+.page-head--nobg
+	background: transparent
+
+	.page-head__title
+		color: $text-color
+		padding: 27px 16px
+
+		h1
+			font-size: 2em
+
+.page-head--show
+	display: block!important
+
+// panel
+.nav-tabs
+	position: relative
+	list-style: none
+	text-align: center
+
+	li
+		display: inline-block
+
+	a
+		display: block
+		color: $color-primary-dark
+		font-weight: bold
+		padding: 10px 30px
+
+	li.active
+		a
+			color: #FFF
+			background-color: $color-primary-dark
+			+border-radius(20px)
+
+.section--panel
+	padding: 10px 0
+
+	&__title
+		h2
+			text-align: center
+
+	&__body
+		position relative
+
+.section--panel:last-child
+	border: none
+
+.price
+	font-weight: bold
+	color: $color-primary-dark
+
+.section-separator
+	border: 1px solid $gray-lighter
+
+.product-wrap
+	margin: 0 10px
+
+	a
+		&:focus
+			outline: 0
+
+	&__ratio
+		position: relative
+		height: 0
+		padding-bottom: 75%
+
+		img
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			object-fit: cover
+
+	&__attributes
+		.title
+			font-size: 1.2em
+
+		p
+			position: relative
+			padding: 5px 0
+
+			.author
+				float: left
+				color: $gray-light
+
+			.price
+				float: right
+
+		p:after
+			clear: both
+			display: table
+			content: ""
+
+.product-wrap-rating
+	float: left
+
+	&--padding
+		margin: 8px
+
+	&__ratio
+		position: relative
+		height: 0
+		padding-bottom: 100%
+
+		img
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			object-fit: cover
+
+	&__attributes
+		padding: 2px
+
+		.title
+			font-size: 0.9em
+
+		.author
+			font-size: 0.8em
+			color: $gray-light
+
+		.price
+			float: left
+			font-size: 0.9em
+
+		.rating
+			float: right
+
+			&__star
+				height: auto
+
+.rating
+	display: inline-block
+
+.product-panel
+	+border-radius(10px)
+	margin: 5px
+
+.product-image
+	&__ratio
+		position: relative
+		height: 0
+		margin: 0 auto
+
+		img
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+
+	.slider-next
+		right: 0
+
+	.slider-prev
+		left: 0
+
+	.slick-dots
+		bottom: 0
+		background-color: rgba(0,0,0,0.3)
+
+		li
+			width: 10px
+			height: 10px
+
+			button
+				background: url('../../images/dots-active.png')
+				background-size: 100%
+				text-indent: -9999px
+				overflow: hidden
+				width: 10px
+				height: 10px
+
+		.slick-active
+			button
+				background: url('../../images/dots.png')
+				background-size: 100%
+
+.draggable
+	cursor: move
+
+.slick-slide
+	&:focus
+		outline: none
+
+.product-detail
+	padding: 10px
+	border-bottom: 1px solid darken($gray-lighter, 10%)
+
+	&__price
+		float: left
+		font-size: 1.2em
+
+		.current-price
+			font-weight: bold
+
+		.disc-price
+			font-size: 0.8em
+			text-decoration: line-through
+			color: #777
+
+	&__author
+		float: right
+		text-align: right
+
+	&__price,
+	&__author
+		p
+			line-height: 1.5em
+
+	.current-price,
+	.location
+		color: $color-primary-dark
+
+.product-buy
+	padding: 10px
+
+	.form-group
+		vertical-align: middle
+
+	.quantity
+		width: 40%
+
+.summary
+	&-item
+		line-height: 1.5em
+		font-family: $font-family-sans-serif-2
+
+		&-left
+			float: left
+
+		&-right
+			float: right
+
+	&-item:after
+		display: table
+		clear: both
+		content: ""
+
+	&--sans > &-item
+		font-family: $font-family-base
+
+	&-item--bank > &-item-left
+		width: 50%
+		vertical-align: middle
+
+		img
+			width: 70%
+			height: auto
+			object-fit: cover
+
+	&-item--bank > &-item-right
+		width: 50%
+		vertical-align: middle
+		font-weight: bold
+		font-size: 1.1em
+		padding: 10px 0
+
+		.rekening
+			color: $color-primary-dark
+
+// portal
+.container--news
+	background-color: #F7B248
+
+.section--portal
+	padding: 12px 10px
+
+	&__title
+		text-align: center
+
+		h2
+			font-weight: normal
+
+	&__show
+		margin: 20px 0
+		text-align: center
+
+.news-wrap
+	background-color: #FFF
+	margin: 0 auto
+
+	&:hover
+		box-shadow: 0 0 8px #777
+
+	&__cover
+		height: 0
+		float: left
+		padding-bottom: 40%
+		position: relative
+		width: 40%
+
+		img
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			position: absolute
+
+	&__body
+		width: 60%
+		float: left
+		padding: 5px 10px
+		word-wrap: break-word
+
+		.btn
+			padding: 6px 0
+			color: $color-primary
+
+		.btn:hover
+			color: $color-primary-dark
+			text-decoration: underline
+
+		a
+			&:hover
+				text-decoration: underline
+
+.news-wrap:after
+	display: table
+	clear: both
+	content: ""
+
+.news--page
+	width: 100%!important
+	padding: 0!important
+	margin-top: 15px
+	margin-bottom: 15px
+
+.news-detail
+	padding: 8px
+
+	&__cover
+		padding: 8px 0
+		text-align: center
+
+		img
+			padding: 20px
+			object-fit: contain
+
+	&__body
+		margin-bottom: 30px
+
+		p, ul, ol
+			margin-top: 1em
+			margin-bottom: 1em
+
+		ul, ol
+			padding-left: 40px
+
+	&__share
+		border-bottom: 2px solid $gray-lighter
+
+		&__item
+			display: inline-block
+			margin-right: 12px
+			margin-bottom: 16px
+
+			span
+				margin: 0 3px
+
+	&__foot
+		&__item
+			border-bottom: 2px solid $gray-lighter
+			padding-bottom: 16px
+
+			h3
+				margin: 10px 0 30px 0
+
+		&__item:last-child
+			border-bottom: none
+
+.news-bait
+	float: left
+	padding: 10px
+
+	&__cover
+		height: 0
+		position: relative
+		padding-bottom: 51.25%
+
+		img
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__title
+		margin: 4px 0
+
+	&__body
+		font-size: 0.9em
+
+.gallery-wrapper:after
+	display: table
+	clear: both
+	content: ""
+
+.gallery
+	float: left
+	padding: 10px
+
+	&__ratio
+		position: relative
+		height: 0
+		padding-bottom: 100%
+		box-shadow: 0 4px 8px 0 $gray-light
+
+		img
+			position: absolute
+			width: 100%
+			height: 100%
+			top: 0
+			left: 0
+			object-fit: cover
+
+		.hover
+			position: absolute
+			width: 100%
+			height: 0
+			top: 0
+			left: 0
+			background-color: rgba(0,0,0,0.6)
+			vertical-align: middle
+			text-align: center
+
+			i
+				position: absolute
+				vertical-align: middle
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				display: none
+				font-size: 40px
+				color: #FFF
+
+.video
+	padding: 15px
+	box-shadow: 0 2px 6px 0 $gray-light
+	margin-top: 15px
+	margin-bottom: 15px
+
+	&:hover
+		box-shadow: 0 0 8px #777
+
+	&:last-child
+		margin-bottom: 10px
+
+	&:after
+		display: block
+		clear: both
+		content: ""
+
+	a:hover
+		opacity: 0.8
+
+		h2
+			text-decoration: underline
+
+	&-ratio
+		position: relative
+		height: 0
+		padding-bottom: 51.25%
+
+		&-thumbs
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+
+		&-helper
+			width: 100%
+			height: 100%
+			position: absolute
+			display: flex
+			justify-content: center
+			align-items: center
+
+			img
+				width: 50px
+				height: 50px
+
+	&-desc
+		&-date
+			font-size: 0.9em
+			color: darken($gray-lighter, 12.5%)
+
+		&-detail
+			word-wrap: break-word
+
+	&-popup
+		display: none
+
+		&-detail
+			color: $gray-lighter
+
+.featherlight
+	&-video > &-content
+		background-color: $gray-darker
+		width: 90%
+
+		iframe
+			width: 100%
+
+// Subscribe
+.container--subscribe
+	background: url('../../images/BG_email.jpg')
+	background-size: cover
+
+.section--subscribe
+	padding: 10px
+
+.subscribe
+	padding-top: 20px
+	padding-bottom: 20px
+
+	&-header
+		color: #fff
+		text-align: center
+
+		*
+			margin: 0.7em 0
+
+		h3
+			font-size: 1.3em
+
+		h2
+			font-weight: normal
+
+	&-body
+		.input-group
+			input
+				width: 70%
+				+border-radius(4px 0 0 4px)
+				padding: 15px
+
+			.input-group__addon
+				width: 30%
+
+				button
+					padding: 16px 4px
+					display: block
+					+border-radius(0 4px 4px 0)
+
+// FAQ
+.faq
+	position: relative
+	padding-left: 15px
+	padding-right: 15px
+
+	&-body
+		margin: 10px 0
+
+	&-description
+		padding-top: 10px
+		padding-bottom: 10px
+		overflow: hidden
+
+		&-title
+			line-height: 1.5em
+			font-size: 1.2em
+			font-weight: bold
+			cursor: pointer
+
+			&:before,
+				content: "+ "
+
+			&.active
+				&:before
+					content: "- "
+
+		&-body
+			display: none
+
+			&.open
+				display: block
+
+			&.no-accordion
+				display: block
+
+// Confirmation
+.confirmation
+	margin: 10px
+	position: absolute
+	top: 0
+	width: 100%
+	padding: 15px
+
+	&-panel
+		border: 1px solid $color-primary
+		border-radius: 4px
+
+		&-head,
+		&-body
+			padding: 10px
+
+		&-head
+			color: #fff
+			background-color: $color-primary
+
+		&-body
+			font-size: 1rem
+
+// Contact
+.contact
+	display: table
+
+	&-list
+		display: table-row
+
+		&-icon,
+		&-detail
+			display: table-cell
+			padding: 10px 8px
+
+		&-icon
+			width: 1rem
+			color: $color-primary
+			line-height: 1.25
+			font-size: 16px
+
+		&-detail
+			line-height: 1.25
+			font-size: 16px
+
+// Map
+.maps
+	background-color: $gray-lighter
+	width: 100%
+	height: 600px
+
+// search
+.search
+	padding: 10px 15px
+
+	&-header
+		padding: 5px 10px
+		border-bottom: 1px solid $color-primary
+
+		&:after
+			display: block
+			clear: both
+			content: " "
+
+		&-title
+			float: left
+			font-size: 1.25rem
+			line-height: 1.5
+			color: $color-primary
+
+		&-detail
+			float: right
+			font-size: 1rem
+			line-height: 1.875
+			color: $color-primary
+			cursor: pointer
+
+			&:hover
+				text-decoration: underline
+
+	&-body
+		padding-top: 5px
+		padding-bottom: 5px
+
+		&:after
+			display: block
+			clear: both
+			content: " "
+
+.lightboxOverlay
+	position: fixed
+
+//== footer block
+//
+// link
+.container--foot
+	background: #EAF6F6
+
+.section--link
+	padding: 20px 16px
+
+	&__logo
+		text-align: center
+
+	&__list
+		li
+			display: block
+
+		a
+			display: block
+			padding: 5px 10px
+
+.section--copyright
+	padding: 10px 0
+
+	&__text
+		text-align: center
+
+@media screen and (min-width: $xs-device)
+	body
+		font-size: 13px
+		padding-top: 46px
+
+	.header
+		height: 46px
+
+	.container--gray
+		background-color: $gray-lighter
+
+	.section
+		max-width: 460px
+
+	.section--hide-sm
+		display: none
+
+	[class*="col-"]
+		width: 100%
+		padding: 10px 0
+
+	.border-right
+		border-bottom: 1px solid darken($gray-lighter, 4%)
+
+	.hide-sm
+		display: none
+
+	.page-head--nobg
+		display: none
+
+	//== header block
+	//
+	// contact
+	.container--contact
+		display: none
+
+	.section--contact
+		&__phone
+			float: left
+
+		&__email
+			float: right
+
+	.section--menu
+		padding: 10px 5px
+
+		&__logo
+			display: inline-block
+			position: absolute
+			left: 50%
+			top: 50%
+			transform: translate(-50%, -50%)
+
+			img
+				width: 120px
+				height: auto
+
+		&__toggle
+			display: inline-block
+
+		&__cart
+			display: inline-block
+			float: right
+
+			.cart-quantity
+				display: none
+
+			.search-toggle
+				display: inline-block
+
+		&__tools
+			display: none
+
+		&__user
+			display: none
+
+		&__search
+			display: none
+
+	// nav
+	.nav-tabs
+		a
+			padding: 5px 10px
+			font-size: 0.9em
+
+	.section--nav
+		&__bar
+			display: none
+
+		&__search
+			display: block
+
+	//== main block
+	//
+	// slider
+	.section--slider
+		&__item
+			&__ratio
+				width: 280px
+
+	// panel produk
+	.product-wrap
+		border: 1px solid $gray-lighter
+		box-shadow: 0 10px 20px 0 $gray-lighter
+
+		&__attributes
+			padding: 6px 12px 24px 12px
+
+	.product-wrap-rating
+		&--padding
+			border: 1px solid $gray-lighter
+			box-shadow: 0 10px 20px 0 $gray-lighter
+
+		&__attributes
+			padding: 3px
+
+	.rating
+		&__star
+			width: 10px
+
+	.product-wrap-rating
+		width: 50%
+
+	.product-panel
+		margin: 0 10px
+		background-color: lighten($gray-lighter, 5%)
+		+border-radius(4px)
+
+	.product-image
+		&__ratio
+			padding-bottom: 100%
+			width: 100%
+
+		&__small
+			display: none
+
+	.product-buy
+		.form-group
+			:first-child
+				float: left
+
+			:last-child
+				float: right
+
+	.product-highlight:after
+		display: table
+		content: ""
+		clear: both
+
+	.product-highlight
+		margin-bottom: 10px
+
+		.product-image
+			float: left
+			width: 20%
+
+			.product-ratio
+				position: relative
+				height: 0
+				padding-bottom: 100%
+
+				img
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+
+		.product-attributes
+			width: 80%
+			float: left
+			padding-left: 10px
+
+	.cart-wrapper
+		[class*="cart-section--"]
+			width: 100%
+
+	// portal
+	.section--portal
+		&__title
+			margin-bottom: 10px
+
+	.news-wrap
+		&__body
+			.title
+				font-size: 0.9em
+
+			.date
+				font-size: 0.7em
+
+			.main
+				font-size: 0.7em
+
+			.btn
+				font-size: 0.7em
+
+	.news--page
+		padding: 5px
+
+		&__padding
+			border: 1px solid $gray-lighter
+			box-shadow: 0 2px 6px 0 $gray-light
+
+		.news-wrap__cover
+			padding-bottom: 30%
+			width: 30%
+
+			img
+				width: 100%
+				height: 100%
+				top: 0
+				left: 0
+				position: absolute
+				object-fit: cover
+
+		.news-wrap__body
+			width: 70%
+
+	.news-bait
+		width: 100%
+
+	.gallery
+		width: 50%
+
+	.video
+		&-embed
+			width: 100%
+
+		&-desc
+			width: 100%
+
+	//== footer block
+	//
+	// link
+	.section--link
+		&__list
+			ul
+				margin-top: 32px
+			a
+				text-align: center
+
+@media screen and (min-width: $small-device)
+	.section
+		max-width: 768px
+
+	//== main block
+	//
+	// slider
+	.section--slider
+		&__item
+			&__ratio
+				width: 600px
+
+	// panel produk
+	.product-wrap-rating
+		width: 25%
+
+	.rating
+		&__star
+			width: 12px
+
+	// portal
+	.news-wrap
+		width: 600px
+		padding: 32px
+
+		&__cover
+			padding-bottom: 32.5%
+
+		&__body
+			.title
+				font-size: 1.25em
+
+			.date
+				font-size: 0.9em
+				line-height: 1.3em
+
+			.main
+				font-size: 1em
+				line-height: 1.3em
+
+			.btn
+				font-size: 1em
+				margin-top: 10px
+
+	.news-detail
+		padding: 8px 32px
+
+	.news-bait
+		width: 50%
+
+	//== footer block
+	//
+	// link
+	.section--link
+		&__list
+
+			ul
+				width: 33.3%
+				float: left
+
+			a
+				text-align: center
+
+@media screen and (min-width: $medium-device)
+	body
+		font-size: $font-size-base
+		padding-top: 139px
+
+	.header
+		top: 27px
+		height: 112px
+
+	.container--gray
+		background-color: #FFF
+
+	.container--search
+		display: none
+
+	.hide-md
+		display: none
+
+	.section
+		max-width: 992px
+
+	.section--hide-sm
+		display: block
+
+	.page-head--nobg
+		display: block
+
+	.hide-sm
+		display: inline-block
+
+	.border-right
+		border-right: 1px solid darken($gray-lighter, 4%)
+
+	[class*="col-"]
+		padding: 10px 16px
+
+	.col-1,
+	.col-off-1:before
+		width: 8.33%
+
+	.col-2,
+	.col-off-2:before
+		width: 16.66%
+
+	.col-3,
+	.col-off-3:before
+		width: 25%
+
+	.col-4,
+	.col-off-4:before
+		width: 33.33%
+
+	.col-5,
+	.col-off-5:before
+		width: 41.66%
+
+	.col-6,
+	.col-off-6:before
+		width: 50%
+
+	.col-7,
+	.col-off-7:before
+		width: 58.33%
+
+	.col-8,
+	.col-off-8:before
+		width: 66.66%
+
+	.col-9,
+	.col-off-9:before
+		width: 75%
+
+	.col-10,
+	.col-off-10:before
+		width: 83.33%
+
+	.col-11,
+	.col-off-11:before
+		width: 91.66%
+
+	.col-12,
+	.col-off-12:before
+		width: 100%
+
+	//== header block
+	//
+	// contact
+	.container--contact
+		display: block
+
+	.section--contact
+		&__phone
+			float: right
+			margin-right: 16px
+
+		&__email
+			float: right
+
+	// menu
+	.section--menu
+		padding: 20px 60px
+
+		&__logo
+			position: static
+			float: left
+			transform: none
+
+		&__toggle
+			display: none
+
+		&__cart
+			float: right
+
+			.cart-quantity
+				display: inline-block
+
+			.search-toggle
+				display: none
+
+		&__tools
+			display: inline-block
+
+		&__user
+			display: inline-block
+
+		&__search
+			display: inline-block
+
+	// nav
+	.section--nav
+		&__bar
+			display: block
+
+		&__search
+			display: none
+
+	.nav-tabs
+		a
+			padding: 10px 20px
+			font-size: 1.1em
+
+	//== main block
+	//
+	// slider
+	.section--slider
+		&__item
+			&__ratio
+				width: 776px
+
+	// panel produk
+	.product-wrap
+		border: none
+		box-shadow: none
+
+		&__attributes
+			padding: 6px 0 24px 0
+
+	.product-wrap-rating
+		&--padding
+			border: none
+			box-shadow: none
+
+		&__attributes
+			padding: 3px 0
+
+	.rating
+		&__star
+			width: 14px
+
+	.product-panel
+		background-color: $gray-lighter
+
+	.product-image
+		&__ratio
+			padding-bottom: 80%
+			width: 80%
+
+		&__big
+			padding: 16px
+			border-bottom: 1px solid darken($gray-lighter, 10%)
+
+			img
+				object-fit: contain
+
+		&__small
+			display: block
+			padding: 8px
+
+			img
+				object-fit: cover
+
+	.product-detail
+		background-color: transparent
+
+	.product-buy
+		.form-group
+			:first-child
+				float: none
+
+			:last-child
+				float: none
+
+	.cart-wrapper
+		[class*="cart-section--"]
+			float: left
+			padding: 10px
+
+		.cart-section--8
+			width: 66.66%
+
+		.cart-section--4
+			width: 33.33%
+
+	.section--portal
+		&__title
+			h2
+				font-size: 1.8em
+
+	// portal
+	.news-wrap
+		width: 776px
+
+		&__cover
+			width: 30%
+			padding-bottom: 21.5%
+
+		&__body
+			width: 70%
+			padding: 0 32px
+
+			.title
+				font-size: 1.3em
+
+			.date
+				font-size: 0.9em
+				line-height: 1.3em
+
+			.main
+				font-size: 1em
+				line-height: 1.3em
+
+			.btn
+				font-size: 1em
+				margin-top: 10px
+
+	.news--page
+		&__padding
+			padding: 15px 25px
+
+		.news-wrap__cover
+			padding-bottom: 20%
+			width: 30%
+
+	.news-bait
+		width: 25%
+
+	.gallery
+		width: 25%
+
+	.gallery:hover
+		.hover
+			height: 100%
+			+transition(all 0.3s)
+
+			i
+				display: block
+
+	.subscribe-body
+		width: 50%
+		margin: 0 auto
+
+	.video
+		&-embed
+			float: left
+			width: 33.33%
+
+		&-desc
+			float: left
+			width: 66.66%
+			padding-left: 15px
+
+		&-popup
+			&-player
+				width: 50%
+				float: left
+				padding-right: 10px
+
+				&-ratio
+					height: 0
+					padding-bottom: 51.25%
+					position: relative
+
+					iframe
+						width: 100%
+						height: 100%
+						position: absolute
+						top: 0
+						left: 0
+
+			&-detail
+				width: 50%
+				float: left
+				padding-left: 10px
+
+	//== footer block
+	//
+	// link
+	.section--link
+		&__logo
+			width: 33.3%
+			float: left
+
+		&__list
+			width: 66.6%
+			float: left
+
+			ul
+				margin-top: 0
+
+			a
+				text-align: left
+
+@media screen and (min-width: $large-device)
+	.section
+		max-width: 1200px
+
+	//== main block
+	//
+	// slider
+	.section--slider
+		&__item
+			&__ratio
+				width: 900px
+
+	// portal
+	.news-wrap
+		width: 900px

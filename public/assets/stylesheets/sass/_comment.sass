@@ -1,0 +1,74 @@
+.comment:after
+	display: table
+	content: ""
+	clear: both
+
+.comment
+	input, textarea, select, label
+		display: block
+
+	label
+		margin: 5px 0
+
+	input, textarea, select
+		border: 1px solid $gray
+		background-color: $gray-lighter
+		padding: 5px 5px
+		width: 100%
+
+	textarea
+		min-height: 70px
+
+	&__inline
+		float: left
+
+	&__block
+		width: 100%
+		float: left
+
+	input:focus, textarea:focus
+		outline: none
+
+.comment-list
+	border-bottom: 1px solid $gray-lighter
+
+	&__item
+		padding: 20px 0
+
+		&__head
+			margin-bottom: 16px
+
+		&__head:after
+			display: table
+			content: ""
+			clear: both
+
+		.commentator
+			font-weight: bold
+
+.comment-list:last-child
+	border-bottom: none
+
+@media screen and (min-width: $xs-device)
+	.comment
+		width: 100%
+
+		&__inline
+			width: 100%
+
+	.comment-list
+		width: 100%
+
+@media screen and (min-width: $medium-device)
+	.comment
+		width: 50%
+
+		&__inline
+			width: 48%
+			margin-right: 4%
+
+		&__inline:nth-child(2)
+			margin-right: 0
+
+	.comment-list
+		width: 75%

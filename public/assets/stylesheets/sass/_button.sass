@@ -1,0 +1,140 @@
+// btn
+button:focus
+	outline: none
+
+.btn
+	padding: $padding-base-vertical $padding-base-horizontal
+	+border-radius($border-radius-base)
+	outline: none
+	display: inline-block
+	cursor: pointer
+
+.btn-sm
+	font-size: $font-size-small
+	padding: $padding-small-vertical
+
+.btn-lg
+	padding: $padding-large-vertical $padding-large-horizontal
+	font-weight: bold
+
+.btn-block
+	display: block
+	width: 100%
+
+.btn-flat
+	+border-radius(0)
+
+.btn-link
+	color: $link-color
+	padding: 0
+
+.btn-link:hover
+	color: $link-hover-color
+
+.btn-default
+	background: $btn-default-bg
+	color: $btn-default-color
+	border: none
+
+.btn-default:hover
+	background: $btn-default-bg-hover
+
+.btn-primary
+	background: $btn-primary-bg
+	color: $btn-primary-color
+	border: none
+
+.btn-primary:hover
+	background: $btn-primary-bg-hover
+
+.btn-opaque
+	background: $btn-opaque-bg
+	border: 1px solid $btn-opaque-color
+	color: $btn-opaque-color
+
+.btn-opaque:hover
+	background: $btn-opaque-bg-hover
+
+.btn-icon
+	padding: 0
+
+.btn-socmed
+	color: #fff
+	+border-radius(50%)
+	width: 40px
+	text-align: center
+	padding: 10px 12px
+
+.btn-less
+	background: transparent
+	border: none
+
+.btn-less:hover
+	text-decoration: underline
+
+.btn-lang
+	border: none
+	background: none
+	float: left
+	padding: 6px
+
+.btn-share
+	padding: $padding-xs-vertical $padding-xs-horizontal
+	color: #fff
+	font-size: 10px
+	width: 60px
+	text-align: center
+
+	i
+		font-size: 12px
+
+.btn-share:hover
+	opacity: 0.7
+
+.btn-fb
+	background-color: #4564B7
+
+.btn-ig
+	background-color: #333
+
+.btn-twitter
+	background-color: #45B0E4
+
+.btn-linkedin
+	background-color: #2174BA
+
+.btn-pinterest
+	background-color: #C10023
+
+.btn-email
+	background-color: #7A7E78
+
+.btn-close
+	background-color: transparent
+	color: $gray-dark
+	opacity: 0.5
+	padding: 0
+	border: none
+	text-transform: lowercase
+	font-weight: bold
+	font-size: 1.2em
+	width: auto
+
+.btn-nav-close
+	background-color: transparent
+	color: $color-primary-dark
+	border: none
+	font-size: 30px
+
+.review
+	padding: 6px 16px
+	+border-radius(20px)
+
+.btn-panel-submit
+	padding: 6px 20px
+	+border-radius(20px)
+	width: auto
+
+@media screen and (min-width: $medium-device)
+	.btn-hide-md
+		display: none

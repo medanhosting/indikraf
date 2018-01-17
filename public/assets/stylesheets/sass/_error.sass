@@ -1,0 +1,42 @@
+.error-box
+   width: 100%
+   height: 100%
+   position: fixed
+   background: url('../../images/error-bg.jpg') no-repeat center center
+   top: 0
+   overflow-y: auto
+
+   &-main
+      text-align: center
+      text-transform: uppercase
+      min-height: 500px
+
+      &-title
+         font-size: 12rem
+         color: $color-primary-dark
+
+      &-sub_title
+         font-weight: normal
+         margin-bottom: 1.5rem
+
+      &-paragraft
+         font-size: 1rem
+         color: $gray-light
+         margin-bottom: 1.5rem
+
+      &-back_button
+         border-radius: 20px
+         padding: 10px 20px
+
+   &-footer
+      left: 0
+      right: 0
+      bottom: 0
+      position: fixed
+      background-color: #fff
+      padding: 10px 16px
+      line-height: 1.3333333
+      font-size: 1rem
+      border-top: 1px solid $gray-lighter
+      text-align: center
+      color: $gray-light

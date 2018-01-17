@@ -1,0 +1,69 @@
+.dropdown
+	position: relative
+	display: inline-block
+	cursor: pointer
+
+.dropdown-list
+	display: none
+	position: absolute
+	background-color: #FFF
+	right: 0
+	width: 200px
+	z-index: 2
+	list-style: none
+	animation: down 0.3s
+	box-shadow: 0 0 5px 0 $gray-light
+
+	a
+		display: block
+		padding: 10px 16px
+		text-align: left
+
+	li:hover
+		background-color: $gray-lighter
+
+	li.separator
+		display: block
+		height: 1px
+		border: 1px solid $gray-lighter
+
+.dropdown-list:before
+	content: " "
+	width: 0
+	height: 0
+	border-left: 12px solid transparent
+	border-right: 12px solid transparent
+	border-bottom: 12px solid #FFF
+	position: absolute
+	right: 5px
+	top: -10px
+
+.dropdown:hover
+	.dropdown-list
+		display: block
+
+@-webkit-keyframes down
+	0%
+		right: 50px
+	100%
+		right: 0
+@-moz-keyframes down
+	0%
+		right: 50px
+	100%
+		right: 0
+@-ms-keyframes down
+	0%
+		right: 50px
+	100%
+		right: 0
+@-o-keyframes down
+	0%
+		right: 50px
+	100%
+		right: 0
+@keyframes down
+	0%
+		right: 50px
+	100%
+		right: 0

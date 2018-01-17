@@ -1,0 +1,153 @@
+.table
+	width: 100%
+	border-collapse: collapse
+	border-spacing: 0
+
+	th, td
+		padding: 4px
+		vertical-align: middle
+
+	thead, tbody
+		position: relative
+
+.table-striped
+	thead
+		font-size: 1.1em
+
+	tbody
+		tr
+			border-bottom: 1px solid darken($gray-lighter, 10%)
+
+		tr:last-child
+			border-bottom: none
+
+	thead, tbody
+		border: 1px solid darken($gray-lighter, 10%)
+
+.table-default
+	thead
+		background-color: $gray-lighter
+
+	tbody
+		background-color: #FFF
+
+.table--review
+	thead
+		border-bottom: 1px solid darken($gray-lighter, 10%)
+
+.table--large
+	th, td
+		padding: 10px
+
+.table-footer
+	position: relative
+	display: table
+	width: 100%
+
+	&--bordered
+		border-top: 1px solid darken($gray-lighter, 10%)
+
+tr.separator:after,
+tr.separator:before
+	display: table-cell
+	content: "\2008"
+
+.table-default + .table-footer
+	background-color: $gray-lighter
+
+.table-striped + .table-footer
+	border: 1px solid darken($gray-lighter, 10%)
+	border-top: 0
+
+.record-track
+	padding: 5px 10px
+	font-weight: bold
+
+.div-table
+	font-weight: bold
+
+	.table-row-group
+		padding: 8px
+		border-bottom: 1px solid darken($gray-lighter, 4%)
+
+		.table-row
+			padding-bottom: 10px
+
+	.table-row-group:last-child
+		border: none
+
+@media screen and (min-width: $xs-device)
+	.table-hide-sm
+		display: none
+
+	.table--review
+		background-color: #FFF
+
+	.thead-hide-sm
+		display: none
+
+	
+	.table-cart-produk
+		width: 100px
+
+	.table-cart-name
+		text-align: left
+
+	.table-cart-price
+		display: none
+
+	.table-cart-quantity
+		width: 120px
+
+		.label
+			text-align: left
+
+		.cancel
+			text-align: right
+
+	.table-footer
+		&-md
+			display: none
+
+@media screen and (min-width: $medium-device)
+	.table--review
+		background-color: inherit
+		
+		thead
+			background-color: $gray-lighter
+
+	.table--cart
+		thead
+			background-color: $gray-lighter
+
+	.table-cart-produk
+		width: 100px
+
+	.table-cart-name
+		.price
+			display: none
+
+	.table-cart-price
+		display: table-cell
+		width: 80px
+
+	.table-cart-quantity
+		width: 120px
+
+		.label
+			text-align: left
+			display: none
+
+		.cancel
+			text-align: right
+			display: none
+
+	.table-footer
+		&-md
+			display: table
+
+	.table-hide-sm
+		display: table-cell
+
+	.thead-hide-sm
+		display: table-header-group

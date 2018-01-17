@@ -1,0 +1,14 @@
+.progress
+   width: 100%
+
+   &-load
+      position: fixed
+      top: 0
+      z-index: 10
+
+      > .progress-bar
+         width: 0
+         height: 2px
+         background-color: $color-primary
+         content: " "
+         transition: all 0.25s

@@ -1,0 +1,33 @@
+.tabs
+	margin: 0px
+	padding: 0px
+	list-style: none
+
+.tabs
+	li
+		display: inline-block
+		padding: 8px
+		cursor: pointer
+
+.tab-content
+	display: none
+	background: inherit
+	padding: 15px
+	word-wrap: break-word
+
+.tab-content.current
+	display: block
+
+@media screen and (min-width: $xs-device)
+	.tabs 
+		background-color: $gray-lighter
+
+		.current
+			background: #FFF
+
+@media screen and (min-width: $medium-device)
+	.tabs 
+		background-color: darken($gray-lighter, 5%)
+
+		.current
+			background: $gray-lighter
